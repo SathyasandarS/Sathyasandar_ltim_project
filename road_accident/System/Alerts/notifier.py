@@ -16,16 +16,16 @@ from typing import Optional, Any, Dict
 # --- Gmail email setup ---
 SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT   = 465
-SMTP_USER   = "sathyasandars@gmail.com"         # ← your Gmail
-SMTP_PASS   = "yvft gity hqch uzay"      # ← Gmail App Password
+SMTP_USER   = ""         # ← your Gmail
+SMTP_PASS   = ""      # ← Gmail App Password
 ALERT_FROM  = SMTP_USER
-DEFAULT_EMAIL_TO = "sathyasandar.s.2024.mtechds@rajalakshmi.edu.in"
+DEFAULT_EMAIL_TO = ""
 
 # --- Vonage SMS setup ---
-VONAGE_API_KEY    = "fd4a4e36"    # ← from dashboard.vonage.com
-VONAGE_API_SECRET = "RWbET1GkYwVD1eP3"
+VONAGE_API_KEY    = ""    # ← from dashboard.vonage.com
+VONAGE_API_SECRET = ""
 VONAGE_FROM       = "AccidentAlert"             # up to 11 chars (sender id)
-DEFAULT_SMS_TO    = "918682064563"           # no '+'; e.g., 919876543210
+DEFAULT_SMS_TO    = ""           # no '+'; e.g., 919876543210
 
 # Network/Proxy/TLS toggles
 USE_PROXY_FROM_ENV = True                    # honors HTTPS_PROXY/HTTP_PROXY if set
@@ -209,4 +209,5 @@ def trigger_alert(event_name: str,
 # ==========================================================
 if __name__ == "__main__":
     send_email("🚨 Test Accident Alert", "This is a test crash alert from control room.")
+
     send_sms("🚨 Test SMS: crash detection system active.")
