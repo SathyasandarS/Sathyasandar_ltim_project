@@ -79,7 +79,8 @@ def _await_ack_and_escalate(alert: Dict[str, Any]) -> None:
                     f"Time: {alert['ts']}\n"
                     f"Crash Boxes: {alert.get('crash_boxes')}\n"
                 ),
-                to="sathyasandar.s.2024.mtechds@rajalakshmi.edu.in",
+                to="",
             )
         except Exception as e:
+
             print(f"[Alerts] Escalation email failed: {e}")
